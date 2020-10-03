@@ -1,5 +1,6 @@
 public class Q1_7_RotateMatrix {
     // O(n^2)
+    @SuppressWarnings("unused")
     private static int[][] rotateMatrix(int[][] matrix) {
         int n = matrix.length;
         int[][] rotated = new int[n][n];
