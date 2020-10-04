@@ -1,16 +1,7 @@
 import java.util.EmptyStackException;
 
 public class MyStack<T> {
-    public static class Node<T> {
-        T value;
-        Node<T> next;
-
-        Node(T value) {
-            this.value = value;
-        }
-    }
-
-    public Node<T> top;
+   public Node<T> top;
 
     @SafeVarargs
     MyStack(T... values) {

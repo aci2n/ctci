@@ -2,7 +2,7 @@ import java.util.EmptyStackException;
 
 public class Q3_2_StackMin {
     private MyStack<Integer> stack;
-    private MyStack<MyStack.Node<Integer>> minStack;
+    private MyStack<Node<Integer>> minStack;
 
     @SafeVarargs
     Q3_2_StackMin(int... values) {

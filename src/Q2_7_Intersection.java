@@ -2,8 +2,8 @@ import java.util.HashMap;
 
 public class Q2_7_Intersection {
     // O(A) space O(A + B) runtime
-    private static MyLinkedList<Integer>.Node intersect(MyLinkedList<Integer> listA, MyLinkedList<Integer> listB) {
-        HashMap<MyLinkedList<Integer>.Node, Integer> map = new HashMap<>();
+    private static Node<Integer> intersect(MyLinkedList<Integer> listA, MyLinkedList<Integer> listB) {
+        HashMap<Node<Integer>, Integer> map = new HashMap<>();
 
         for (var node = listA.head; node != null; node = node.next) {
             map.put(node, 1);

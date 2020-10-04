@@ -1,5 +1,5 @@
 public class Q2_3_DeleteMiddleNode {
-    private static void deleteMiddleNode(MyLinkedList<Integer>.Node node) {
+    private static void deleteMiddleNode(Node<Integer> node) {
         if (node.next == null) {
             throw new IllegalArgumentException("cannot delete tail");
         }

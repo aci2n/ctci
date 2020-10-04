@@ -1,15 +1,6 @@
 import java.util.EmptyStackException;
 
 public class MyQueue<T> {
-    public static class Node<T> {
-        T value;
-        Node<T> next;
-
-        Node(T value) {
-            this.value = value;
-        }
-    }
-
     public Node<T> head;
     public Node<T> tail;
 

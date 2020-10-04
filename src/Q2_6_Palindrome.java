@@ -1,9 +1,9 @@
 public class Q2_6_Palindrome {
     private static class Match {
-        MyLinkedList<Integer>.Node nextNode;
+        Node<Integer> nextNode;
         boolean matched;
 
-        Match(MyLinkedList<Integer>.Node nextNode, boolean matched) {
+        Match(Node<Integer> nextNode, boolean matched) {
             this.nextNode = nextNode;
             this.matched = matched;
         }
@@ -20,7 +20,7 @@ public class Q2_6_Palindrome {
         return matchNode(list.head, size, 0).matched;
     }
 
-    private static Match matchNode(MyLinkedList<Integer>.Node head, int size, int depth) {
+    private static Match matchNode(Node<Integer> head, int size, int depth) {
         if (depth == size / 2) {
             return new Match(size % 2 == 0 ? head : head.next, true);
         }

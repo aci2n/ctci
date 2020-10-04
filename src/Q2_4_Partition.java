@@ -1,7 +1,7 @@
 public class Q2_4_Partition {
     // O(1) space O(N) runtime
     private static void partition(MyLinkedList<Integer> list, int part) {
-        MyLinkedList<Integer>.Node leftNodeSearchStart = null;
+        Node<Integer> leftNodeSearchStart = null;
 
         for (var rightNode = list.head; rightNode != null; rightNode = rightNode.next) {
             int rightNodeValue = rightNode.value;
@@ -26,7 +26,7 @@ public class Q2_4_Partition {
         }
     }
 
-    private static MyLinkedList<Integer>.Node searchNextLeftNode(MyLinkedList<Integer>.Node head, int part) {
+    private static Node<Integer> searchNextLeftNode(Node<Integer> head, int part) {
         for (var node = head; node != null; node = node.next) {
             if (node.value < part) {
                 return node;

@@ -1,20 +1,6 @@
 import java.util.function.Consumer;
 
 public class MyLinkedList<T> {
-    public class Node {
-        T value;
-        Node next;
-
-        Node(T value) {
-            this.value = value;
-        }
-
-        @Override
-        public String toString() {
-            return String.format("[value: %s]", value);
-        }
-    }
-
     @SafeVarargs
     MyLinkedList(T... values) {
         for (T value : values) {
@@ -23,16 +9,16 @@ public class MyLinkedList<T> {
     }
 
     // making everything public to access inside excercises
-    public Node head;
+    public Node<T> head;
 
     public void add(T value) {
         head = addNode(value);
     }
 
-    private Node addNode(T value) {
-        Node newNode = new Node(value);
+    private Node<T> addNode(T value) {
+        Node<T> newNode = new Node<>(value);
 
-        for (Node node = head; node != null; node = node.next) {
+        for (Node<T> node = head; node != null; node = node.next) {
             if (node.next == null) {
                 node.next = newNode;
                 return head;
@@ -46,10 +32,10 @@ public class MyLinkedList<T> {
         head = deleteNode(value);
     }
 
-    private Node deleteNode(T value) {
-        Node prev = head;
+    private Node<T> deleteNode(T value) {
+        Node<T> prev = head;
 
-        for (Node node = head; node != null; node = node.next) {
+        for (Node<T> node = head; node != null; node = node.next) {
             if (!node.value.equals(value)) {
                 prev = node;
                 continue;
@@ -67,7 +53,7 @@ public class MyLinkedList<T> {
     }
 
     public T get(int index) {
-        for (Node node = head; node != null; node = node.next) {
+        for (Node<T> node = head; node != null; node = node.next) {
             if (index-- == 0) {
                 return node.value;
             }
@@ -76,8 +62,8 @@ public class MyLinkedList<T> {
         return null;
     }
 
-    public Node getNode(int index) {
-        for (Node node = head; node != null; node = node.next) {
+    public Node<T> getNode(int index) {
+        for (Node<T> node = head; node != null; node = node.next) {
             if (index-- == 0) {
                 return node;
             }
@@ -87,7 +73,7 @@ public class MyLinkedList<T> {
     }
 
     public void forEach(Consumer<T> consumer) {
-        for (Node node = head; node != null; node = node.next) {
+        for (Node<T> node = head; node != null; node = node.next) {
             consumer.accept(node.value);
         }
     }
@@ -100,17 +86,17 @@ public class MyLinkedList<T> {
         return head == null;
     }
 
-    public void putNode(Node inserted, int index) {
+    public void putNode(Node<T> inserted, int index) {
         head = insertNode(inserted, index);
     }
 
-    private Node insertNode(Node inserted, int index) {
+    private Node<T> insertNode(Node<T> inserted, int index) {
         if (index == 0) {
             inserted.next = head;
             return inserted;
         }
 
-        for (Node node = head; node != null; node = node.next) {
+        for (Node<T> node = head; node != null; node = node.next) {
             if (--index == 0) {
                 inserted.next = node.next;
                 node.next = inserted;
@@ -121,8 +107,8 @@ public class MyLinkedList<T> {
         return head;
     }
 
-    public Node tailNode() {
-        Node tail = head;
+    public Node<T> tailNode() {
+        Node<T> tail = head;
 
         while (tail.next != null) {
             tail = tail.next;
