@@ -86,6 +86,10 @@ public class MyLinkedList<T> {
         return head == null;
     }
 
+    public void insert(T value, int index) {
+        putNode(new Node<T>(value), index);
+    }
+
     public void putNode(Node<T> inserted, int index) {
         head = insertNode(inserted, index);
     }

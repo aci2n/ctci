@@ -1,5 +1,3 @@
-import java.util.EmptyStackException;
-
 public class MyQueue<T> {
     public Node<T> head;
     public Node<T> tail;

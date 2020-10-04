@@ -1,5 +1,4 @@
 public class MyHashTable<K, V> {
-
     public interface Hasher<K> {
         int apply(K value);
     }

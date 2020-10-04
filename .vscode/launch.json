@@ -6,20 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - Q3_4_StackBasedQueue",
-            "request": "launch",
-            "mainClass": "Q3_4_StackBasedQueue",
-            "projectName": "ctci_46c78fb6"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Q3_3_StackOfPlates",
-            "request": "launch",
-            "mainClass": "Q3_3_StackOfPlates",
-            "projectName": "ctci_46c78fb6"
-        },
-        {
-            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}",
