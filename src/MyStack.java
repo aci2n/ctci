@@ -2,6 +2,7 @@ import java.util.EmptyStackException;
 
 public class MyStack<T> {
    public Node<T> top;
+   private int size;
 
     @SafeVarargs
     MyStack(T... values) {
@@ -18,12 +19,14 @@ public class MyStack<T> {
         Node<T> node = new Node<>(value);
         node.next = top;
         top = node;
+        size++;
     }
 
     public T pop() {
         checkNotEmpty();
         T value = top.value;
         top = top.next;
+        size--;
         return value;
     }
 
@@ -36,6 +39,10 @@ public class MyStack<T> {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
+    }
+
+    public int size() {
+        return size;
     }
 
     public static void main(String[] args) {
