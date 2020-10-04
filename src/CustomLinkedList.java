@@ -8,6 +8,11 @@ public class CustomLinkedList<T> {
         Node(T value) {
             this.value = value;
         }
+
+        @Override
+        public String toString() {
+            return String.format("[value: %s]", value);
+        }
     }
 
     @SafeVarargs
@@ -114,6 +119,16 @@ public class CustomLinkedList<T> {
         }
 
         return head;
+    }
+
+    public Node tailNode() {
+        Node tail = head;
+
+        while (tail.next != null) {
+            tail = tail.next;
+        }
+
+        return tail;
     }
 
     public static void main(String[] args) {
