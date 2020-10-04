@@ -91,6 +91,31 @@ public class CustomLinkedList<T> {
         forEach(value -> System.out.println(value));
     }
 
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public void putNode(Node inserted, int index) {
+        head = insertNode(inserted, index);
+    }
+
+    private Node insertNode(Node inserted, int index) {
+        if (index == 0) {
+            inserted.next = head;
+            return inserted;
+        }
+
+        for (Node node = head; node != null; node = node.next) {
+            if (--index == 0) {
+                inserted.next = node.next;
+                node.next = inserted;
+                return head;
+            }
+        }
+
+        return head;
+    }
+
     public static void main(String[] args) {
         CustomLinkedList<String> list = new CustomLinkedList<>();
 
