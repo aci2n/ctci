@@ -2,7 +2,7 @@
 
 ### Build
 ```sh
-javac -d bin src/*
+javac -d bin src/**/*.java
 ```
 
 ### Run
