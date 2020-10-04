@@ -18,4 +18,18 @@ public final class Utils {
             System.out.println();
         }
     }
+
+    public static <T> void printStack(MyStack<T> stack) {
+        MyStack<T> temp = new MyStack<>();
+
+        while (!stack.isEmpty()) {
+            T value = stack.pop();
+            System.out.println(value);
+            temp.push(value);
+        }
+
+        while (!temp.isEmpty()) {
+            stack.push(temp.pop());
+        }
+    }
 }
