@@ -1,5 +1,5 @@
 public class Q2_3_DeleteMiddleNode {
-    private static void deleteMiddleNode(CustomLinkedList<Integer>.Node node) {
+    private static void deleteMiddleNode(MyLinkedList<Integer>.Node node) {
         if (node.next == null) {
             throw new IllegalArgumentException("cannot delete tail");
         }
@@ -16,7 +16,7 @@ public class Q2_3_DeleteMiddleNode {
     }
 
     public static void main(String[] args) {
-        CustomLinkedList<Integer> list = new CustomLinkedList<>(0, 1, 2, 3, 4, 5);
+        MyLinkedList<Integer> list = new MyLinkedList<>(0, 1, 2, 3, 4, 5);
         list.printAll();
 
         System.out.println("--delete node 2--");

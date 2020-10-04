@@ -1,7 +1,7 @@
 public class Q2_4_Partition {
     // O(1) space O(N) runtime
-    private static void partition(CustomLinkedList<Integer> list, int part) {
-        CustomLinkedList<Integer>.Node leftNodeSearchStart = null;
+    private static void partition(MyLinkedList<Integer> list, int part) {
+        MyLinkedList<Integer>.Node leftNodeSearchStart = null;
 
         for (var rightNode = list.head; rightNode != null; rightNode = rightNode.next) {
             int rightNodeValue = rightNode.value;
@@ -26,7 +26,7 @@ public class Q2_4_Partition {
         }
     }
 
-    private static CustomLinkedList<Integer>.Node searchNextLeftNode(CustomLinkedList<Integer>.Node head, int part) {
+    private static MyLinkedList<Integer>.Node searchNextLeftNode(MyLinkedList<Integer>.Node head, int part) {
         for (var node = head; node != null; node = node.next) {
             if (node.value < part) {
                 return node;
@@ -37,7 +37,7 @@ public class Q2_4_Partition {
     }
 
     public static void main(String[] args) {
-        CustomLinkedList<Integer> list = new CustomLinkedList<>(3, 5, 8, 5, 10, 2, 1, 2, 1, 1, 1);   
+        MyLinkedList<Integer> list = new MyLinkedList<>(3, 5, 8, 5, 10, 2, 1, 2, 1, 1, 1);   
         list.printAll();
 
         System.out.println("--partition 5--");

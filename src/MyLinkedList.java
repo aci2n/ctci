@@ -1,6 +1,6 @@
 import java.util.function.Consumer;
 
-public class CustomLinkedList<T> {
+public class MyLinkedList<T> {
     public class Node {
         T value;
         Node next;
@@ -16,7 +16,7 @@ public class CustomLinkedList<T> {
     }
 
     @SafeVarargs
-    CustomLinkedList(T... values) {
+    MyLinkedList(T... values) {
         for (T value : values) {
             add(value);
         }
@@ -132,7 +132,7 @@ public class CustomLinkedList<T> {
     }
 
     public static void main(String[] args) {
-        CustomLinkedList<String> list = new CustomLinkedList<>();
+        MyLinkedList<String> list = new MyLinkedList<>();
 
         list.add("hola");
         list.add("como");

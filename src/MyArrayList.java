@@ -1,9 +1,9 @@
-public class CustomArrayList<T> {
+public class MyArrayList<T> {
     private Object[] buffer;
     private int growthFactor;
     private int size;
 
-    CustomArrayList() {
+    MyArrayList() {
         buffer = new Object[1];
         growthFactor = 2;
         size = 0;
@@ -40,7 +40,7 @@ public class CustomArrayList<T> {
     }
 
     public static void main(String[] args) {
-        CustomArrayList<String> list = new CustomArrayList<>();
+        MyArrayList<String> list = new MyArrayList<>();
 
         list.add("hola");
         list.add("como");

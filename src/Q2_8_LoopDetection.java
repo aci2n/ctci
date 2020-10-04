@@ -1,6 +1,6 @@
 public class Q2_8_LoopDetection {
     // O(1) space O(NM) runtime; N = list size, M = loop size
-    private static CustomLinkedList<Integer>.Node detectLoop(CustomLinkedList<Integer> list) {
+    private static MyLinkedList<Integer>.Node detectLoop(MyLinkedList<Integer> list) {
         var slow = list.head;
         var fast = list.head;
 
@@ -36,7 +36,7 @@ public class Q2_8_LoopDetection {
     }
     
     public static void main(String[] args) {
-        CustomLinkedList<Integer> list = new CustomLinkedList<>(0, 1, 2, 3, 4, 5, 6);
+        MyLinkedList<Integer> list = new MyLinkedList<>(0, 1, 2, 3, 4, 5, 6);
         list.tailNode().next = list.getNode(2); // value == node index
 
         System.out.println(String.format("loop beginning: %s", detectLoop(list)));

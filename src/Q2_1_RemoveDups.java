@@ -4,7 +4,7 @@ import java.util.HashMap;
 public class Q2_1_RemoveDups {
     // O(1) space O(n2) runtime
     @SuppressWarnings("unused")
-    private static CustomLinkedList<Integer> removeDupsN2(CustomLinkedList<Integer> list) {
+    private static MyLinkedList<Integer> removeDupsN2(MyLinkedList<Integer> list) {
         for (var nodeA = list.head; nodeA != null; nodeA = nodeA.next) {
             var prev = nodeA;
 
@@ -21,9 +21,9 @@ public class Q2_1_RemoveDups {
     }
 
     // O(N) space O(N) runtime
-    private static CustomLinkedList<Integer> removeDupsN(CustomLinkedList<Integer> list) {
+    private static MyLinkedList<Integer> removeDupsN(MyLinkedList<Integer> list) {
         Map<Integer, Boolean> map = new HashMap<>();
-        CustomLinkedList<Integer> deduped = new CustomLinkedList<>();
+        MyLinkedList<Integer> deduped = new MyLinkedList<>();
 
         for (var node = list.head; node != null; node = node.next) {
             if (map.containsKey(node.value)) {
@@ -38,7 +38,7 @@ public class Q2_1_RemoveDups {
     }
 
     public static void main(String[] args) {
-        CustomLinkedList<Integer> list = new CustomLinkedList<>(1, 6, 2, 6, 8, 3, 10, 2, 1, 9);
+        MyLinkedList<Integer> list = new MyLinkedList<>(1, 6, 2, 6, 8, 3, 10, 2, 1, 9);
 
         list.printAll();
 

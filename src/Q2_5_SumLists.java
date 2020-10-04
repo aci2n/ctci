@@ -1,10 +1,10 @@
 public class Q2_5_SumLists {
-    private static CustomLinkedList<Integer> sumLists(CustomLinkedList<Integer> listA,
-            CustomLinkedList<Integer> listB) {
+    private static MyLinkedList<Integer> sumLists(MyLinkedList<Integer> listA,
+            MyLinkedList<Integer> listB) {
         int numberA = readListNumber(listA);
         int numberB = readListNumber(listB);
         int sum = numberA + numberB;
-        CustomLinkedList<Integer> result = new CustomLinkedList<>();
+        MyLinkedList<Integer> result = new MyLinkedList<>();
 
         while (sum > 0) {
             int digit = sum % 10;
@@ -16,7 +16,7 @@ public class Q2_5_SumLists {
         return result;
     }
 
-    private static int readListNumber(CustomLinkedList<Integer> list) {
+    private static int readListNumber(MyLinkedList<Integer> list) {
         int number = 0;
         int i = 0;
 
@@ -28,8 +28,8 @@ public class Q2_5_SumLists {
     }
 
     public static void main(String[] args) {
-        CustomLinkedList<Integer> listA = new CustomLinkedList<>(7, 1, 6);
-        CustomLinkedList<Integer> listB = new CustomLinkedList<>(5, 9, 2);
+        MyLinkedList<Integer> listA = new MyLinkedList<>(7, 1, 6);
+        MyLinkedList<Integer> listB = new MyLinkedList<>(5, 9, 2);
 
         System.out.println("--list A--");
         listA.printAll();

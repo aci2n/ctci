@@ -2,8 +2,8 @@ import java.util.HashMap;
 
 public class Q2_7_Intersection {
     // O(A) space O(A + B) runtime
-    private static CustomLinkedList<Integer>.Node intersect(CustomLinkedList<Integer> listA, CustomLinkedList<Integer> listB) {
-        HashMap<CustomLinkedList<Integer>.Node, Integer> map = new HashMap<>();
+    private static MyLinkedList<Integer>.Node intersect(MyLinkedList<Integer> listA, MyLinkedList<Integer> listB) {
+        HashMap<MyLinkedList<Integer>.Node, Integer> map = new HashMap<>();
 
         for (var node = listA.head; node != null; node = node.next) {
             map.put(node, 1);
@@ -20,13 +20,13 @@ public class Q2_7_Intersection {
 
     // O(1) space O(A + B) runtime
     @SuppressWarnings("unused")
-    private static boolean intersect2(CustomLinkedList<Integer> listA, CustomLinkedList<Integer> listB) {
+    private static boolean intersect2(MyLinkedList<Integer> listA, MyLinkedList<Integer> listB) {
         return listA.tailNode() == listB.tailNode();
     }
 
     public static void main(String[] args) {
-        CustomLinkedList<Integer> listA = new CustomLinkedList<>(1, 2, 3, 4, 5);
-        CustomLinkedList<Integer> listB = new CustomLinkedList<>(2, 5, 6);
+        MyLinkedList<Integer> listA = new MyLinkedList<>(1, 2, 3, 4, 5);
+        MyLinkedList<Integer> listB = new MyLinkedList<>(2, 5, 6);
 
         System.out.println("--before insertion--");
         System.out.println(intersect(listA, listB));

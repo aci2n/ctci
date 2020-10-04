@@ -1,4 +1,4 @@
-public class CustomHashTable<K, V> {
+public class MyHashTable<K, V> {
 
     public interface Hasher<K> {
         int apply(K value);
@@ -19,7 +19,7 @@ public class CustomHashTable<K, V> {
     private Hasher<K> hasher;
     private Object[] nodes;
 
-    CustomHashTable(Hasher<K> hasher)  {
+    MyHashTable(Hasher<K> hasher)  {
         this.hasher = hasher;
         nodes = new Object[100];
     }
@@ -75,7 +75,7 @@ public class CustomHashTable<K, V> {
     }
 
     public static void main(String[] args) {
-        CustomHashTable<String, String> map = new CustomHashTable<>(string -> {
+        MyHashTable<String, String> map = new MyHashTable<>(string -> {
             return string.charAt(string.length() - 1);
         });
 
