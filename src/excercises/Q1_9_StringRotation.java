@@ -11,7 +11,7 @@ public class Q1_9_StringRotation {
     }
 
     public static void main(String[] args) {
-        String[][] tests = { { "waterbottle", "erbottlewat" }, { "tabacco", "ccotaba" }, { "football", "ballfoo" } };
+        String[][] tests = {{"waterbottle", "erbottlewat"}, {"tabacco", "ccotaba"}, {"football", "ballfoo"}};
 
         for (String[] test : tests) {
             String s1 = test[0];

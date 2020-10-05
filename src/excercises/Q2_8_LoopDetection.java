@@ -39,7 +39,7 @@ public class Q2_8_LoopDetection {
 
         throw new RuntimeException();
     }
-    
+
     public static void main(String[] args) {
         MyLinkedList<Integer> list = new MyLinkedList<>(0, 1, 2, 3, 4, 5, 6);
         list.tailNode().next = list.getNode(2); // value == node index

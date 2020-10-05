@@ -11,6 +11,14 @@ public class MyQueue<T> {
         }
     }
 
+    public static void main(String[] args) {
+        MyQueue<Integer> queue = new MyQueue<>(1, 2, 3, 4, 5);
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.remove());
+        }
+    }
+
     public void add(T value) {
         Node<T> node = new Node<>(value);
 
@@ -48,14 +56,6 @@ public class MyQueue<T> {
     private void checkNotEmpty() {
         if (isEmpty()) {
             throw new RuntimeException("empty queue");
-        }
-    }
-
-    public static void main(String[] args) {
-        MyQueue<Integer> queue = new MyQueue<>(1, 2, 3, 4, 5);
-
-        while (!queue.isEmpty()) {
-            System.out.println(queue.remove());
         }
     }
 }

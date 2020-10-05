@@ -3,6 +3,9 @@ package structs;
 import java.util.function.Consumer;
 
 public class MyLinkedList<T> {
+    // making everything public to access inside exercises
+    public Node<T> head;
+
     @SafeVarargs
     public MyLinkedList(T... values) {
         for (T value : values) {
@@ -10,8 +13,23 @@ public class MyLinkedList<T> {
         }
     }
 
-    // making everything public to access inside exercises
-    public Node<T> head;
+    public static void main(String[] args) {
+        MyLinkedList<String> list = new MyLinkedList<>();
+
+        list.add("hola");
+        list.add("como");
+        list.add("va");
+        list.add("todo");
+        list.printAll();
+
+        System.out.println("--delete 'va'--");
+        list.delete("va");
+        list.printAll();
+
+        System.out.println("--delete 'hola'--");
+        list.delete("hola");
+        list.printAll();
+    }
 
     public void add(T value) {
         head = addNode(value);
@@ -121,23 +139,5 @@ public class MyLinkedList<T> {
         }
 
         return tail;
-    }
-
-    public static void main(String[] args) {
-        MyLinkedList<String> list = new MyLinkedList<>();
-
-        list.add("hola");
-        list.add("como");
-        list.add("va");
-        list.add("todo");
-        list.printAll();
-
-        System.out.println("--delete 'va'--");
-        list.delete("va");
-        list.printAll();
-
-        System.out.println("--delete 'hola'--");
-        list.delete("hola");
-        list.printAll();
     }
 }

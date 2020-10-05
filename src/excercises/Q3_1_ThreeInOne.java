@@ -1,6 +1,39 @@
 package excercises;
 
 public class Q3_1_ThreeInOne {
+    public static void main(String[] args) {
+        int[] sizes = {4, 5, 6};
+        int totalSize = 0;
+
+        for (int size : sizes) {
+            totalSize += size;
+        }
+
+        int[] buffer = new int[totalSize];
+
+        for (int i = 0, start = 0; i < sizes.length; i++) {
+            int end = start + sizes[i];
+            MiniStack stack = new MiniStack(buffer, start, end);
+            start = end;
+
+            assert stack.isEmpty();
+
+            for (int j = 0; j < sizes[i]; j++) {
+                stack.push(j);
+            }
+
+            assert stack.isFull();
+
+            System.out.println(String.format("--stack %d, size %s--", i, sizes[i]));
+
+            for (int j = 0; j < sizes[i]; j++) {
+                System.out.println(stack.pop());
+            }
+
+            assert stack.isEmpty();
+        }
+    }
+
     private static class MiniStack {
         int[] buffer;
         // {start: 0, end: 3} means we have slots [0, 1, 2]
@@ -48,39 +81,6 @@ public class Q3_1_ThreeInOne {
             if (isEmpty()) {
                 throw new RuntimeException("stack empty");
             }
-        }
-    }
-
-    public static void main(String[] args) {
-        int[] sizes = { 4, 5, 6 };
-        int totalSize = 0;
-
-        for (int size : sizes) {
-            totalSize += size;
-        }
-
-        int[] buffer = new int[totalSize];
-
-        for (int i = 0, start = 0; i < sizes.length; i++) {
-            int end = start + sizes[i];
-            MiniStack stack = new MiniStack(buffer, start, end);
-            start = end;
-
-            assert stack.isEmpty();
-
-            for (int j = 0; j < sizes[i]; j++) {
-                stack.push(j);
-            }
-
-            assert stack.isFull();
-
-            System.out.println(String.format("--stack %d, size %s--", i, sizes[i]));
-
-            for (int j = 0; j < sizes[i]; j++) {
-                System.out.println(stack.pop());
-            }
-
-            assert stack.isEmpty();
         }
     }
 }

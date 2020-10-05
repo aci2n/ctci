@@ -1,12 +1,6 @@
 package excercises;
 
 public class Q1_5_OneAway {
-    private static class ShorterLonger {
-        String shorter;
-        String longer;
-        int diff;
-    }
-
     private static ShorterLonger getShorterLonger(String a, String b) {
         ShorterLonger sl = new ShorterLonger();
         int diff = a.length() - b.length();
@@ -59,7 +53,7 @@ public class Q1_5_OneAway {
     }
 
     public static void main(String[] args) {
-        String[][] tests = { { "pale", "ple" }, { "pales", "pale" }, { "pale", "bale" }, { "pale", "bake" }, {"ple", "pale"}, {"macc", "macacs"} };
+        String[][] tests = {{"pale", "ple"}, {"pales", "pale"}, {"pale", "bale"}, {"pale", "bake"}, {"ple", "pale"}, {"macc", "macacs"}};
 
         for (String[] test : tests) {
             String a = test[0];
@@ -67,5 +61,11 @@ public class Q1_5_OneAway {
             boolean oneAway = isOneAway(a, b);
             System.out.println(String.format("%s, %s: %b", a, b, oneAway));
         }
+    }
+
+    private static class ShorterLonger {
+        String shorter;
+        String longer;
+        int diff;
     }
 }

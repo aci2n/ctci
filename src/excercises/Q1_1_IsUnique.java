@@ -26,7 +26,7 @@ class Q1_1_IsUnique {
     }
 
     public static void main(String[] args) {
-        String[] tests = { "abc", "aba", "abx", "", "aaaaaa", null };
+        String[] tests = {"abc", "aba", "abx", "", "aaaaaa", null};
 
         for (String test : tests) {
             try {

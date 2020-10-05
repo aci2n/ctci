@@ -2,14 +2,28 @@ package structs;
 
 public class MyArrayList<T> {
     private Object[] buffer;
-    private int growthFactor;
+    private final int growthFactor;
     private int size;
 
     MyArrayList() {
         buffer = new Object[1];
         growthFactor = 2;
         size = 0;
-    } 
+    }
+
+    public static void main(String[] args) {
+        MyArrayList<String> list = new MyArrayList<>();
+
+        list.add("hola");
+        list.add("como");
+        list.add("estas");
+        list.add("yo mal");
+        list.add("piola");
+
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+    }
 
     public void add(T element) {
         if (size < buffer.length) {
@@ -39,19 +53,5 @@ public class MyArrayList<T> {
             throw new IndexOutOfBoundsException();
         }
         return (T) buffer[i];
-    }
-
-    public static void main(String[] args) {
-        MyArrayList<String> list = new MyArrayList<>();
-
-        list.add("hola");
-        list.add("como");
-        list.add("estas");
-        list.add("yo mal");
-        list.add("piola");
-
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
-        }
     }
 }

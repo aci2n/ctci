@@ -5,6 +5,33 @@ import structs.MyStack;
 import java.util.EmptyStackException;
 
 public class Q3_3_StackOfPlates {
+    public static void main(String[] args) {
+        SetOfStacks<Integer> stacks = new SetOfStacks<>(2);
+        int testValues = 10;
+
+        for (int i = 0; i < testValues; i++) {
+            assert stacks.size() == i;
+            stacks.push(i);
+            assert stacks.size() == i + 1;
+        }
+
+        // pop the third stack from last which has values [2, 3]
+        assert stacks.popAt(3) == 3;
+        assert stacks.size() == testValues - 1;
+
+        // pop the third again, should have the previous bottom value of the second (4)
+        assert stacks.popAt(3) == 4;
+        assert stacks.size() == testValues - 2;
+
+        for (int i = testValues - 3; i >= 0; i--) {
+            int popped = stacks.pop();
+            assert popped != 3 && popped != 4;
+            assert stacks.size() == i;
+        }
+
+        assert stacks.isEmpty();
+    }
+
     private static class SetOfStacks<T> {
         MyStack<MyStack<T>> stackOfStacks = new MyStack<>();
         int maxStackSize;
@@ -64,7 +91,7 @@ public class Q3_3_StackOfPlates {
 
             MyStack<T> current = stackOfStacks.pop();
             T popped;
-                
+
             if (depth == target) {
                 popped = current.pop();
             } else {
@@ -81,7 +108,7 @@ public class Q3_3_StackOfPlates {
 
             return popped;
         }
-        
+
         private T removeBottom(MyStack<T> stack) {
             MyStack<T> inverted = new MyStack<>();
 
@@ -97,33 +124,5 @@ public class Q3_3_StackOfPlates {
 
             return bottom;
         }
-    }
-
-
-    public static void main(String[] args) {
-        SetOfStacks<Integer> stacks = new SetOfStacks<>(2);
-        int testValues = 10;
-        
-        for (int i = 0; i < testValues; i++) {
-            assert stacks.size() == i;
-            stacks.push(i);
-            assert stacks.size() == i + 1;
-        }
-
-        // pop the third stack from last which has values [2, 3]
-        assert stacks.popAt(3) == 3;
-        assert stacks.size() == testValues - 1;
-
-        // pop the third again, should have the previous bottom value of the second (4)
-        assert stacks.popAt(3) == 4;
-        assert stacks.size() == testValues - 2;
-
-        for (int i = testValues - 3; i >= 0 ; i--) {
-            int popped = stacks.pop();
-            assert popped != 3 && popped != 4;
-            assert stacks.size() == i;
-        }
-
-        assert stacks.isEmpty();
     }
 }

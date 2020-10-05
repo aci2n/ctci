@@ -42,7 +42,7 @@ public class Q2_4_Partition {
     }
 
     public static void main(String[] args) {
-        MyLinkedList<Integer> list = new MyLinkedList<>(3, 5, 8, 5, 10, 2, 1, 2, 1, 1, 1);   
+        MyLinkedList<Integer> list = new MyLinkedList<>(3, 5, 8, 5, 10, 2, 1, 2, 1, 1, 1);
         list.printAll();
 
         System.out.println("--partition 5--");

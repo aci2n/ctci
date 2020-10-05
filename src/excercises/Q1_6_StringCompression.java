@@ -27,7 +27,7 @@ public class Q1_6_StringCompression {
     }
 
     public static void main(String[] args) {
-        String tests[] = {"aaabbbbccd", "abcd", "abaca"};
+        String[] tests = {"aaabbbbccd", "abcd", "abaca"};
 
         for (String test : tests) {
             System.out.println(String.format("%s: %s", test, compressString(test)));

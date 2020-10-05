@@ -40,7 +40,7 @@ public class Q1_2_CheckPermutation {
     }
 
     public static void main(String[] args) {
-        String[][] tests = { { "aba", "aab" }, { "abcd", "abce" }, { "andasdasda", "dna" } };
+        String[][] tests = {{"aba", "aab"}, {"abcd", "abce"}, {"andasdasda", "dna"}};
 
         for (String[] test : tests) {
             String a = test[0];

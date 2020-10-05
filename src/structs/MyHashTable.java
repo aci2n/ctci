@@ -1,28 +1,33 @@
 package structs;
 
 public class MyHashTable<K, V> {
-    public interface Hasher<K> {
-        int apply(K value);
-    }
-
-    public class Node {
-        Node next;
-        K key;
-        V value;
-
-        Node(K key, V value) {
-            this.key = key;
-            this.value = value;
-        }
-    }
+    private final Hasher<K> hasher;
+    private final Object[] nodes;
 
 
-    private Hasher<K> hasher;
-    private Object[] nodes;
-
-    MyHashTable(Hasher<K> hasher)  {
+    MyHashTable(Hasher<K> hasher) {
         this.hasher = hasher;
         nodes = new Object[100];
+    }
+
+    public static void main(String[] args) {
+        MyHashTable<String, String> map = new MyHashTable<>(string -> {
+            return string.charAt(string.length() - 1);
+        });
+
+        map.set("keyA", "valueA");
+        map.set("keyB", "valueB");
+
+
+        System.out.println("keyA: " + map.get("keyA"));
+        System.out.println("keyB: " + map.get("keyB"));
+
+        map.set("otraKeyA", "otroValueA");
+        map.set("keyA", "valueA2");
+
+        System.out.println("keyA: " + map.get("keyA"));
+        System.out.println("keyB: " + map.get("keyB"));
+        System.out.println("otraKeyA: " + map.get("otraKeyA"));
     }
 
     private int getIndex(K key) {
@@ -67,7 +72,7 @@ public class MyHashTable<K, V> {
         int index = getIndex(key);
 
         for (Node node = getNode(index); node != null; node = node.next) {
-            if (node.key.equals(key))  {
+            if (node.key.equals(key)) {
                 return node.value;
             }
         }
@@ -75,23 +80,18 @@ public class MyHashTable<K, V> {
         return null;
     }
 
-    public static void main(String[] args) {
-        MyHashTable<String, String> map = new MyHashTable<>(string -> {
-            return string.charAt(string.length() - 1);
-        });
+    public interface Hasher<K> {
+        int apply(K value);
+    }
 
-        map.set("keyA", "valueA");
-        map.set("keyB", "valueB");
+    public class Node {
+        Node next;
+        K key;
+        V value;
 
-
-        System.out.println("keyA: " + map.get("keyA"));
-        System.out.println("keyB: " + map.get("keyB"));
-
-        map.set("otraKeyA", "otroValueA");
-        map.set("keyA", "valueA2");
-
-        System.out.println("keyA: " + map.get("keyA"));
-        System.out.println("keyB: " + map.get("keyB"));
-        System.out.println("otraKeyA: " + map.get("otraKeyA"));
+        Node(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
     }
 }

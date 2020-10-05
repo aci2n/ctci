@@ -7,7 +7,7 @@ public class Q2_2_KthToLast {
     private static int kthToLast(MyLinkedList<Integer> list, int k) {
         int[] buffer = new int[k + 1];
         int index = 0;
-        int size = 0; 
+        int size = 0;
 
         for (var node = list.head; node != null; node = node.next) {
             buffer[index] = node.value;

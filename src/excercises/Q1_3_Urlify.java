@@ -38,7 +38,7 @@ public class Q1_3_Urlify {
     }
 
     public static void main(String[] args) {
-        String[] tests = { "     hola como estas bro todo en orden    ????", "", "todobn" };
+        String[] tests = {"     hola como estas bro todo en orden    ????", "", "todobn"};
 
         for (String test : tests) {
             char[] chars = test.toCharArray();

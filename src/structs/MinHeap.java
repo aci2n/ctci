@@ -9,6 +9,34 @@ public class MinHeap {
         }
     }
 
+    public static void main(String[] args) {
+        MinHeap heap = new MinHeap(4, 50, 7, 2, 90, 87, 55, 1);
+
+        System.out.println("--initial--");
+        Utils.printTree(heap.root);
+
+        System.out.println("--extract min 1st time--");
+        assert heap.extractMin() == 1;
+        Utils.printTree(heap.root);
+
+        System.out.println("--extract min 2nd time--");
+        assert heap.extractMin() == 2;
+        Utils.printTree(heap.root);
+
+        System.out.println("--insert non min--");
+        heap.insert(5);
+        Utils.printTree(heap.root);
+
+        assert heap.extractMin() == 4;
+        assert heap.extractMin() == 5;
+        assert heap.extractMin() == 7;
+        assert heap.extractMin() == 50;
+        assert heap.extractMin() == 55;
+        assert heap.extractMin() == 87;
+        assert heap.extractMin() == 90;
+        assert heap.root == null;
+    }
+
     public void insert(int value) {
         BinaryTreeNode<Integer> node = new BinaryTreeNode<>(value);
 
@@ -100,11 +128,7 @@ public class MinHeap {
 
         var left = removeLastNode(root.left, limit, depth + 1);
 
-        if (left != null) {
-            return left;
-        }
-
-        return null;
+        return left;
     }
 
     public int extractMin() {
@@ -145,33 +169,5 @@ public class MinHeap {
         if (a.value < b.value)
             return a;
         return b;
-    }
-
-    public static void main(String[] args) {
-        MinHeap heap = new MinHeap(4, 50, 7, 2, 90, 87, 55, 1);
-
-        System.out.println("--initial--");
-        Utils.printTree(heap.root);
-
-        System.out.println("--extract min 1st time--");
-        assert heap.extractMin() == 1;
-        Utils.printTree(heap.root);
-
-        System.out.println("--extract min 2nd time--");
-        assert heap.extractMin() == 2;
-        Utils.printTree(heap.root);
-
-        System.out.println("--insert non min--");
-        heap.insert(5);
-        Utils.printTree(heap.root);
-
-        assert heap.extractMin() == 4;
-        assert heap.extractMin() == 5;
-        assert heap.extractMin() == 7;
-        assert heap.extractMin() == 50;
-        assert heap.extractMin() == 55;
-        assert heap.extractMin() == 87;
-        assert heap.extractMin() == 90;
-        assert heap.root == null;
     }
 }

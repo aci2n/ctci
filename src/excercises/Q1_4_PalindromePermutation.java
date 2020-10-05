@@ -38,7 +38,7 @@ public class Q1_4_PalindromePermutation {
     }
 
     public static void main(String[] args) {
-        String[] tests = { "Tact Coa", "Elle elle", "menem", "o cacao", "oi", "a", "iiixi iixiiooooo"};
+        String[] tests = {"Tact Coa", "Elle elle", "menem", "o cacao", "oi", "a", "iiixi iixiiooooo"};
 
         for (String test : tests) {
             System.out.println(String.format("%s: %b", test, isPalindromePermutation(test)));

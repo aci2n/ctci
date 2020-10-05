@@ -3,9 +3,17 @@ package excercises;
 import structs.MyStack;
 
 public class Q3_4_StackBasedQueue {
+    public static void main(String[] args) {
+        StackBasedQueue<Integer> queue = new StackBasedQueue<>(0, 1, 2, 3, 4);
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.remove());
+        }
+    }
+
     private static class StackBasedQueue<T> {
-        private MyStack<T> inverter = new MyStack<>();
-        private MyStack<T> stack = new MyStack<>();
+        private final MyStack<T> inverter = new MyStack<>();
+        private final MyStack<T> stack = new MyStack<>();
 
         @SafeVarargs
         StackBasedQueue(T... values) {
@@ -50,14 +58,6 @@ public class Q3_4_StackBasedQueue {
             if (isEmpty()) {
                 throw new RuntimeException("stack empty");
             }
-        }
-    }
-
-    public static void main(String[] args) {
-        StackBasedQueue<Integer> queue = new StackBasedQueue<>(0, 1, 2, 3, 4);
-
-        while (!queue.isEmpty()) {
-            System.out.println(queue.remove());
         }
     }
 }

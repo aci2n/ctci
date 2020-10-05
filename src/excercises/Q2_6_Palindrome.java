@@ -4,16 +4,6 @@ import structs.MyLinkedList;
 import structs.Node;
 
 public class Q2_6_Palindrome {
-    private static class Match {
-        Node<Integer> nextNode;
-        boolean matched;
-
-        Match(Node<Integer> nextNode, boolean matched) {
-            this.nextNode = nextNode;
-            this.matched = matched;
-        }
-    }
-
     // O(N) space O(N) runtime
     private static boolean isPalindrome(MyLinkedList<Integer> list) {
         int size = 0;
@@ -43,5 +33,15 @@ public class Q2_6_Palindrome {
         System.out.println(String.format("listA: %b", isPalindrome(listA)));
         System.out.println(String.format("listB: %b", isPalindrome(listB)));
         System.out.println(String.format("listC: %b", isPalindrome(listC)));
+    }
+
+    private static class Match {
+        Node<Integer> nextNode;
+        boolean matched;
+
+        Match(Node<Integer> nextNode, boolean matched) {
+            this.nextNode = nextNode;
+            this.matched = matched;
+        }
     }
 }
