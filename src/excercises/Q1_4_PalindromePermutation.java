@@ -1,5 +1,7 @@
-import java.util.Map;
+package excercises;
+
 import java.util.HashMap;
+import java.util.Map;
 
 public class Q1_4_PalindromePermutation {
     // O(N)

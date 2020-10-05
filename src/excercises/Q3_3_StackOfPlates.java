@@ -1,3 +1,7 @@
+package excercises;
+
+import structs.MyStack;
+
 import java.util.EmptyStackException;
 
 public class Q3_3_StackOfPlates {

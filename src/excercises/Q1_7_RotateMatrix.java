@@ -1,3 +1,7 @@
+package excercises;
+
+import structs.Utils;
+
 public class Q1_7_RotateMatrix {
     // O(n^2)
     @SuppressWarnings("unused")

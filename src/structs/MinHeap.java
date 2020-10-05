@@ -1,3 +1,5 @@
+package structs;
+
 public class MinHeap {
     BinaryTreeNode<Integer> root;
 

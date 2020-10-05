@@ -1,3 +1,5 @@
+package structs;
+
 public class GraphNode<T> {
     public T value;
     public GraphNode<T>[] adjacent;

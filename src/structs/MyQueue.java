@@ -1,9 +1,11 @@
+package structs;
+
 public class MyQueue<T> {
     public Node<T> head;
     public Node<T> tail;
 
     @SafeVarargs
-    MyQueue(T... values) {
+    public MyQueue(T... values) {
         for (T value : values) {
             add(value);
         }

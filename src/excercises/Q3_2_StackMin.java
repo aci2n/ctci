@@ -1,3 +1,8 @@
+package excercises;
+
+import structs.MyStack;
+import structs.Node;
+
 import java.util.EmptyStackException;
 
 public class Q3_2_StackMin {

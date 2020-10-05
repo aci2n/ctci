@@ -1,3 +1,8 @@
+package excercises;
+
+import structs.MyLinkedList;
+import structs.Node;
+
 public class Q2_6_Palindrome {
     private static class Match {
         Node<Integer> nextNode;

@@ -1,3 +1,5 @@
+package structs;
+
 public class Graph<T> {
     public GraphNode<T>[] nodes;
 

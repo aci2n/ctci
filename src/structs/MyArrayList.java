@@ -1,3 +1,5 @@
+package structs;
+
 public class MyArrayList<T> {
     private Object[] buffer;
     private int growthFactor;

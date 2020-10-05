@@ -1,3 +1,5 @@
+package excercises;
+
 public class Q3_1_ThreeInOne {
     private static class MiniStack {
         int[] buffer;

@@ -1,3 +1,7 @@
+package excercises;
+
+import structs.MyStack;
+
 public class Q3_4_StackBasedQueue {
     private static class StackBasedQueue<T> {
         private MyStack<T> inverter = new MyStack<>();

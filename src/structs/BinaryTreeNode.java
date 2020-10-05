@@ -1,3 +1,5 @@
+package structs;
+
 public class BinaryTreeNode<T> {
     public T value;
     public BinaryTreeNode<T> left;

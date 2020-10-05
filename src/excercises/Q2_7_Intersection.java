@@ -1,3 +1,8 @@
+package excercises;
+
+import structs.MyLinkedList;
+import structs.Node;
+
 import java.util.HashMap;
 
 public class Q2_7_Intersection {

@@ -1,3 +1,8 @@
+package excercises;
+
+import structs.MyLinkedList;
+import structs.Node;
+
 public class Q2_3_DeleteMiddleNode {
     private static void deleteMiddleNode(Node<Integer> node) {
         if (node.next == null) {

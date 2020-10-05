@@ -1,3 +1,8 @@
+package excercises;
+
+import structs.MyStack;
+import structs.Utils;
+
 public class Q3_5_SortStacks {
     private static void sortStack(MyStack<Integer> stack) {
         MyStack<Integer> aux = new MyStack<>();

@@ -1,3 +1,5 @@
+package structs;
+
 public final class Utils {
     public static void printMatrix(int[][] matrix) {
         assert matrix != null : "matrix cannot be null";

@@ -1,3 +1,5 @@
+package structs;
+
 import java.util.EmptyStackException;
 
 public class MyStack<T> {
@@ -5,7 +7,7 @@ public class MyStack<T> {
    private int size;
 
     @SafeVarargs
-    MyStack(T... values) {
+    public MyStack(T... values) {
         for (T value : values) {
             push(value);
         }

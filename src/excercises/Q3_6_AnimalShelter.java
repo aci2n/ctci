@@ -1,3 +1,7 @@
+package excercises;
+
+import structs.MyQueue;
+
 import java.util.LinkedList;
 
 public class Q3_6_AnimalShelter {

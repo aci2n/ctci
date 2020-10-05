@@ -1,3 +1,7 @@
+package excercises;
+
+import structs.Utils;
+
 public class Q1_8_ZeroMatrix {
 
     private static void zeroMatrix(int[][] matrix) {

@@ -1,3 +1,5 @@
+package excercises;
+
 import java.util.Arrays;
 
 class Q1_1_IsUnique {

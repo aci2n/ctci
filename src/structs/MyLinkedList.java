@@ -1,14 +1,16 @@
+package structs;
+
 import java.util.function.Consumer;
 
 public class MyLinkedList<T> {
     @SafeVarargs
-    MyLinkedList(T... values) {
+    public MyLinkedList(T... values) {
         for (T value : values) {
             add(value);
         }
     }
 
-    // making everything public to access inside excercises
+    // making everything public to access inside exercises
     public Node<T> head;
 
     public void add(T value) {

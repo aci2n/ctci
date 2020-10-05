@@ -1,3 +1,5 @@
+package excercises;
+
 public class Q1_9_StringRotation {
     private static boolean isSubstring(String haystack, String needle) {
         return haystack.contains(needle);

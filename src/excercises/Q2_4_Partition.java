@@ -1,3 +1,8 @@
+package excercises;
+
+import structs.MyLinkedList;
+import structs.Node;
+
 public class Q2_4_Partition {
     // O(1) space O(N) runtime
     private static void partition(MyLinkedList<Integer> list, int part) {

@@ -1,6 +1,10 @@
+package excercises;
+
+import structs.MyLinkedList;
+
 public class Q2_5_SumLists {
     private static MyLinkedList<Integer> sumLists(MyLinkedList<Integer> listA,
-            MyLinkedList<Integer> listB) {
+                                                  MyLinkedList<Integer> listB) {
         int numberA = readListNumber(listA);
         int numberB = readListNumber(listB);
         int sum = numberA + numberB;

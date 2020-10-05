@@ -1,3 +1,5 @@
+package excercises;
+
 public class Q1_6_StringCompression {
 
     private static String compressString(String str) {

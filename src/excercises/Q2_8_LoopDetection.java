@@ -1,3 +1,8 @@
+package excercises;
+
+import structs.MyLinkedList;
+import structs.Node;
+
 public class Q2_8_LoopDetection {
     // O(1) space O(NM) runtime; N = list size, M = loop size
     private static Node<Integer> detectLoop(MyLinkedList<Integer> list) {

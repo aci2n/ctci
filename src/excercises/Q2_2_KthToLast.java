@@ -1,3 +1,7 @@
+package excercises;
+
+import structs.MyLinkedList;
+
 public class Q2_2_KthToLast {
     // O(k) space O(N) runtime
     private static int kthToLast(MyLinkedList<Integer> list, int k) {

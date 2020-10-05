@@ -1,3 +1,5 @@
+package excercises;
+
 public class Q1_5_OneAway {
     private static class ShorterLonger {
         String shorter;

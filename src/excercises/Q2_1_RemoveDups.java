@@ -1,5 +1,9 @@
-import java.util.Map;
+package excercises;
+
+import structs.MyLinkedList;
+
 import java.util.HashMap;
+import java.util.Map;
 
 public class Q2_1_RemoveDups {
     // O(1) space O(n2) runtime
