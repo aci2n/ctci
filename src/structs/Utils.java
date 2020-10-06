@@ -36,10 +36,11 @@ public final class Utils {
     }
 
     public static <T> void printTree(BinaryTreeNode<T> root) {
-        printTree(root, 0);
+        printTree(root, 0, "");
     }
 
-    private static <T> void printTree(BinaryTreeNode<T> root, int depth) {
+    private static <T> void printTree(BinaryTreeNode<T> root, int depth,
+                                      String prefix) {
         if (root == null) {
             return;
         }
@@ -47,11 +48,11 @@ public final class Utils {
         String branch = "";
 
         if (depth > 0) {
-            branch = "  ".repeat(depth - 1) + "↳ ";
+            branch = "  ".repeat(depth - 1) + prefix + " → ";
         }
 
         System.out.println(String.format("%s%s", branch, root.value));
-        printTree(root.left, depth + 1);
-        printTree(root.right, depth + 1);
+        printTree(root.left, depth + 1, "L");
+        printTree(root.right, depth + 1, "R");
     }
 }
