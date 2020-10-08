@@ -7,46 +7,25 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Q4_9_BSTSequences_v2 {
-    private static void weaveLeft(ArrayList<LinkedList<Integer>> results,
-                                  LinkedList<Integer> left,
-                                  LinkedList<Integer> right,
-                                  LinkedList<Integer> prefix) {
-        if (right.isEmpty()) {
-            return;
-        }
-
-        if (left.isEmpty()) {
-            LinkedList<Integer> result = new LinkedList<>(prefix);
-            result.addAll(right);
-            results.add(result);
-            return;
-        }
-
-        prefix.addLast(left.removeFirst());
-        weave(results, left, right, prefix);
-        left.addFirst(prefix.removeLast());
-    }
-
     private static void weave(ArrayList<LinkedList<Integer>> results,
                               LinkedList<Integer> listA,
                               LinkedList<Integer> listB,
                               LinkedList<Integer> prefix) {
-        weaveLeft(results, listA, listB, prefix);
-        weaveLeft(results, listB, listA, prefix);
-    }
-
-    private static ArrayList<LinkedList<Integer>> weaveAll(ArrayList<LinkedList<Integer>> results,
-                                                           ArrayList<LinkedList<Integer>> listsA,
-                                                           ArrayList<LinkedList<Integer>> listsB) {
-        LinkedList<Integer> prefix = new LinkedList<>();
-
-        for (LinkedList<Integer> listA : listsA) {
-            for (LinkedList<Integer> listB : listsB) {
-                weave(results, listA, listB, prefix);
-            }
+        if (listA.isEmpty() || listB.isEmpty()) {
+            LinkedList<Integer> result = new LinkedList<>(prefix);
+            result.addAll(listA);
+            result.addAll(listB);
+            results.add(result);
+            return;
         }
 
-        return results;
+        prefix.addLast(listA.removeFirst());
+        weave(results, listA, listB, prefix);
+        listA.addFirst(prefix.removeLast());
+
+        prefix.addLast(listB.removeFirst());
+        weave(results, listA, listB, prefix);
+        listB.addFirst(prefix.removeLast());
     }
 
     private static ArrayList<LinkedList<Integer>> getBSTSequences(BinaryTreeNode<Integer> root) {
@@ -57,17 +36,13 @@ public class Q4_9_BSTSequences_v2 {
             return results;
         }
 
-        if (root.left == null && root.right == null) {
-            LinkedList<Integer> base = new LinkedList<>();
-            base.addFirst(root.value);
-            results.add(base);
-            return results;
-        }
+        LinkedList<Integer> prefix = new LinkedList<>();
+        prefix.add(root.value);
 
-        weaveAll(results, getBSTSequences(root.left), getBSTSequences(root.right));
-
-        for (LinkedList<Integer> list : results) {
-            list.addFirst(root.value);
+        for (LinkedList<Integer> listA : getBSTSequences(root.left)) {
+            for (LinkedList<Integer> listB : getBSTSequences(root.right)) {
+                weave(results, listA, listB, prefix);
+            }
         }
 
         return results;
