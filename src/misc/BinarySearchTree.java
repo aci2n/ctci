@@ -1,4 +1,4 @@
-package structs;
+package misc;
 
 public class BinarySearchTree {
     public BinaryTreeNode<Integer> root;

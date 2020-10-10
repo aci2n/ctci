@@ -1,6 +1,6 @@
 package exercises;
 
-import structs.MyLinkedList;
+import misc.MyLinkedList;
 
 public class Q2_2_KthToLast {
     // O(k) space O(N) runtime

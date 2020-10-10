@@ -1,6 +1,6 @@
 package exercises;
 
-import structs.BinaryTreeNode;
+import misc.BinaryTreeNode;
 
 import java.util.ArrayList;
 

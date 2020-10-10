@@ -1,4 +1,4 @@
-package structs;
+package misc;
 
 public class GraphNode<T> {
     public T value;
@@ -15,8 +15,9 @@ public class GraphNode<T> {
         status = Status.UNVISITED;
     }
 
+    @SuppressWarnings("unchecked")
     public GraphNode(T value) {
-        this(value, null);
+        this(value, new GraphNode[0]);
     }
 
     public static GraphNode<Integer> intNode(int value) {

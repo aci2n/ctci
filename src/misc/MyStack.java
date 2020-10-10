@@ -1,4 +1,4 @@
-package structs;
+package misc;
 
 import java.util.EmptyStackException;
 

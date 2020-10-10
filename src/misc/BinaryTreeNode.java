@@ -1,4 +1,4 @@
-package structs;
+package misc;
 
 public class BinaryTreeNode<T> {
     public T value;

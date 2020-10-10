@@ -1,11 +1,11 @@
 package exercises;
 
-import structs.Graph;
-import structs.GraphNode;
+import misc.Graph;
+import misc.GraphNode;
 
 import java.util.LinkedList;
 
-import static structs.GraphNode.Status.*;
+import static misc.GraphNode.Status.*;
 
 public class Q4_1_RouteBetweenNodes {
     // DFS

@@ -1,7 +1,7 @@
 package exercises;
 
-import structs.MyStack;
-import structs.Utils;
+import misc.MyStack;
+import misc.Utils;
 
 public class Q3_5_SortStacks {
     private static void sortStack(MyStack<Integer> stack) {

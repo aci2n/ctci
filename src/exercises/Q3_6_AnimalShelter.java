@@ -1,6 +1,6 @@
 package exercises;
 
-import structs.MyQueue;
+import misc.MyQueue;
 
 import java.util.LinkedList;
 

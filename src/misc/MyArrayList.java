@@ -1,4 +1,4 @@
-package structs;
+package misc;
 
 public class MyArrayList<T> {
     private Object[] buffer;

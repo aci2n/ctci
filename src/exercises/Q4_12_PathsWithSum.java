@@ -1,6 +1,6 @@
 package exercises;
 
-import structs.BinaryTreeNode;
+import misc.BinaryTreeNode;
 
 public class Q4_12_PathsWithSum {
     static int countPathsWithSum(BinaryTreeNode<Integer> root, int target) {

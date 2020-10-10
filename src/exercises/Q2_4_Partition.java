@@ -1,7 +1,7 @@
 package exercises;
 
-import structs.MyLinkedList;
-import structs.Node;
+import misc.MyLinkedList;
+import misc.Node;
 
 public class Q2_4_Partition {
     // O(1) space O(N) runtime

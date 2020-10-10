@@ -1,4 +1,4 @@
-package structs;
+package misc;
 
 public final class Utils {
     public static void printMatrix(int[][] matrix) {

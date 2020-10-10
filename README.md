@@ -4,10 +4,10 @@
 
 ### Compile
 ```sh
-$ javac -d out src/**/*.java
+$ javac -d out -Xlint:unchecked src/**/*.java
 ```
 
 ### Run
 ```sh
-$ java -cp out {MainClass}
+$ java -cp out -enableassertions {MainClass}
 ```

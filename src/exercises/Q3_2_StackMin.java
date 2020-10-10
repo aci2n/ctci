@@ -1,7 +1,7 @@
 package exercises;
 
-import structs.MyStack;
-import structs.Node;
+import misc.MyStack;
+import misc.Node;
 
 import java.util.EmptyStackException;
 

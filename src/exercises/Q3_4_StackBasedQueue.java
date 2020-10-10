@@ -1,6 +1,6 @@
 package exercises;
 
-import structs.MyStack;
+import misc.MyStack;
 
 public class Q3_4_StackBasedQueue {
     public static void main(String[] args) {

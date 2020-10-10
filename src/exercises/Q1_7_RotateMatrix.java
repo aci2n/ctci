@@ -1,6 +1,6 @@
 package exercises;
 
-import structs.Utils;
+import misc.Utils;
 
 public class Q1_7_RotateMatrix {
     // O(n^2)

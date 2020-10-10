@@ -1,4 +1,4 @@
-package structs;
+package misc;
 
 public class MyHashTable<K, V> {
     private final Hasher<K> hasher;

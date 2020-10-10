@@ -1,4 +1,4 @@
-package structs;
+package misc;
 
 public class MyQueue<T> {
     public Node<T> head;

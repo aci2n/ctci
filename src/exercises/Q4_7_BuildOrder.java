@@ -1,12 +1,12 @@
 package exercises;
 
-import structs.GraphNode;
+import misc.GraphNode;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
-import static structs.GraphNode.Status.*;
+import static misc.GraphNode.Status.*;
 
 public class Q4_7_BuildOrder {
     private static class Node {

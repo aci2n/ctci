@@ -1,7 +1,7 @@
 package exercises;
 
-import structs.MyLinkedList;
-import structs.Node;
+import misc.MyLinkedList;
+import misc.Node;
 
 import java.util.HashMap;
 

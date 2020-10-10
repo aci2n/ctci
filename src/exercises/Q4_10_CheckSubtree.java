@@ -1,6 +1,6 @@
 package exercises;
 
-import structs.BinaryTreeNode;
+import misc.BinaryTreeNode;
 
 public class Q4_10_CheckSubtree {
 

@@ -1,6 +1,6 @@
 package exercises;
 
-import structs.MyLinkedList;
+import misc.MyLinkedList;
 
 public class Q2_5_SumLists {
     private static MyLinkedList<Integer> sumLists(MyLinkedList<Integer> listA,

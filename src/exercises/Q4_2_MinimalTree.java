@@ -1,7 +1,7 @@
 package exercises;
 
-import structs.BinaryTreeNode;
-import structs.Utils;
+import misc.BinaryTreeNode;
+import misc.Utils;
 
 public class Q4_2_MinimalTree {
     private static BinaryTreeNode<Integer> createMinimalTree(int[] values) {

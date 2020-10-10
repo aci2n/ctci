@@ -1,7 +1,7 @@
 package exercises;
 
-import structs.BinaryTreeNode;
-import structs.Utils;
+import misc.BinaryTreeNode;
+import misc.Utils;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

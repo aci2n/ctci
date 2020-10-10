@@ -1,7 +1,7 @@
 package exercises;
 
-import structs.MyLinkedList;
-import structs.Node;
+import misc.MyLinkedList;
+import misc.Node;
 
 public class Q2_6_Palindrome {
     // O(N) space O(N) runtime

@@ -1,7 +1,7 @@
 package exercises;
 
-import structs.BinaryTreeNode;
-import structs.Utils;
+import misc.BinaryTreeNode;
+import misc.Utils;
 
 public class Q4_6_Successor {
     private static BinaryTreeNode<Integer> getMinNode(BinaryTreeNode<Integer> root) {

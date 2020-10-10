@@ -1,6 +1,6 @@
 package exercises;
 
-import structs.Utils;
+import misc.Utils;
 
 public class Q1_8_ZeroMatrix {
 

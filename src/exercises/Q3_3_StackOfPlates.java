@@ -1,6 +1,6 @@
 package exercises;
 
-import structs.MyStack;
+import misc.MyStack;
 
 import java.util.EmptyStackException;
 
