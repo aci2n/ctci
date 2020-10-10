@@ -1,5 +1,8 @@
 package misc;
 
+import static misc.Utils.arraysEqual;
+import static misc.Utils.printArray;
+
 public class SortAndSearch {
     private static void swap(int[] array, int a, int b) {
         int temp = array[a];
@@ -116,21 +119,6 @@ public class SortAndSearch {
 
     private static int[] sortedArray() {
         return new int[]{-1, 1, 2, 3, 5, 8, 9, 9};
-    }
-
-    private static boolean arraysEqual(int[] a, int[] b) {
-        if (a.length != b.length) return false;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] != b[i]) return false;
-        }
-        return true;
-    }
-
-    private static void printArray(int[] array) {
-        for (int value : array) {
-            System.out.print(value + " ");
-        }
-        System.out.println();
     }
 
     private static int binarySearch(int[] array, int value) {

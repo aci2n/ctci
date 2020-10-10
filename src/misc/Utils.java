@@ -55,4 +55,19 @@ public final class Utils {
         printTree(root.left, depth + 1, "L");
         printTree(root.right, depth + 1, "R");
     }
+
+    public static boolean arraysEqual(int[] a, int[] b) {
+        if (a.length != b.length) return false;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] != b[i]) return false;
+        }
+        return true;
+    }
+
+    public static void printArray(int[] array) {
+        for (int value : array) {
+            System.out.print(value + " ");
+        }
+        System.out.println();
+    }
 }
