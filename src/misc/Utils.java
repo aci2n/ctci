@@ -65,6 +65,11 @@ public final class Utils {
     }
 
     public static void printArray(int[] array) {
+        if (array == null) {
+            System.out.println("null");
+            return;
+        }
+
         for (int value : array) {
             System.out.print(value + " ");
         }
